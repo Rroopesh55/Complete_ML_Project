@@ -6,4 +6,4 @@ scikit-learn
 catboost
 xgboost
 lightgbm
-#-e .
+-e .
