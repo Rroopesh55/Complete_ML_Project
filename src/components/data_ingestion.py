@@ -30,13 +30,17 @@ class DataIngestion:
             
             logging.info("Initiating train test split")
             train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)# Split the dataset into training and testing sets with a test size of 20% and a random state for reproducibility
-            logging.info("Train test split completed")
+            logging.info("Train test split initiated successfully")
             
             train_set.to_csv(self.ingestion_config.train_data_path,index=False,header = True)
             test_set.to_csv(self.ingestion_config.test_data_path,index=False,header = True)
             
-            logging.info("Train and test data is saved")
+            logging.info("Ingestion of the data is completed")
             
+            return(
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
             
         except Exception as e:
             logging.info("Exited the data ingestion method or component")
