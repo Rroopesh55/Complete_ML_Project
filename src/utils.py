@@ -2,9 +2,14 @@ import os
 import sys
 import numpy as np
 import pandas as pd
-
+from pathlib import Path
 from src.exception import CustomException
 from src.logger import logging
+
+try:
+    import dill as serializer
+except ImportError:  # pragma: no cover
+    import pickle as serializer
 
 def save_object(file_path, obj):
     """
@@ -18,11 +23,11 @@ def save_object(file_path, obj):
     - CustomException: If there is an error during the saving process.
     """
     try:
-        import pickle
-        os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        with open(file_path, 'wb') as file_obj:
-            pickle.dump(obj, file_obj)
-        logging.info(f"Object saved at {file_path}")
+        path = Path(file_path)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("wb") as f:
+            serializer.dump(obj, f)
+        logging.info(f"Object saved successfully at {path}")
     except Exception as e:
-        logging.error(f"Error saving object: {e}")
+        logging.error(f"Error saving object to {file_path}: {e}")
         raise CustomException(e, sys)
