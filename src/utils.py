@@ -80,3 +80,25 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
     except Exception as e:
         logging.error(f"Error evaluating models: {e}")
         raise CustomException(e, sys)
+    
+def load_object(file_path):
+    """
+    Load an object from a file using pickle.
+    
+    Parameters:
+    - file_path (str): The path from where the object will be loaded.
+    
+    Returns:
+    - The loaded object.
+    
+    Raises:
+    - CustomException: If there is an error during the loading process.
+    """
+    try:
+        with open(file_path, "rb") as f:
+            obj = serializer.load(f)
+        logging.info(f"Object loaded successfully from {file_path}")
+        return obj
+    except Exception as e:
+        logging.error(f"Error loading object from {file_path}: {e}")
+        raise CustomException(e, sys)
