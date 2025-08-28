@@ -1,4 +1,4 @@
-name: workflow
+name: CI/CD to ECR + EC2
 
 on:
   push:
