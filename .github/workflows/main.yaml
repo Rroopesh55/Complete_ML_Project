@@ -1,8 +1,8 @@
-name: CI/CD to ECR + EC2 (self-hosted)
+name: workflow
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
     paths-ignore:
       - "README.md"
       - ".github/workflows/main.yaml"
