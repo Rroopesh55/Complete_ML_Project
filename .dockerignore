@@ -1,0 +1,19 @@
+.git
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+notebook/
+*.ipynb_checkpoints/
+catboost_info/
+artifacts/data.csv
+artifacts/train.csv
+artifacts/test.csv
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
