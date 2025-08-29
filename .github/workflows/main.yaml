@@ -78,11 +78,11 @@ jobs:
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Pull & run latest image (port 5000)
+      - name: Pull & run latest image (port 8080)
         run: |
           set -e
           IMAGE_URI="${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${ECR_REPOSITORY}:${IMAGE_TAG}"
           docker pull "$IMAGE_URI"
           docker rm -f ml_project_container || true
-          docker run -d --name ml_project_container -p 5000:5000 "$IMAGE_URI"
+          docker run -d --name ml_project_container -p 8080:8080 "$IMAGE_URI"
           docker image prune -f
