@@ -2,8 +2,8 @@
 
 <div align="center">
   
+  ![alt text](<docs/start prediction.PNG>)
   [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
-  ![alt text](<start prediction.PNG>)
   [![Flask](https://img.shields.io/badge/Flask-2.0+-green.svg)](https://flask.palletsprojects.com/)
   [![Docker](https://img.shields.io/badge/Docker-Containerized-blue.svg)](https://www.docker.com/)
   [![AWS](https://img.shields.io/badge/AWS-Deployed-orange.svg)](https://aws.amazon.com/)
@@ -317,17 +317,17 @@ docker run -d --name ml_project_container -p 8080:8080 <image-uri>
 | `AWS_ACCOUNT_ID`        | 12-digit account ID        |
 | `ECR_REPOSITORY_NAME`   | e.g., `studentperformance` |
 
-![alt text](github_actions_access_keys.PNG)
+![alt text](docs/github_actions_access_keys.PNG)
 
 ### 🖥️ Self-hosted Runner (EC2)
 
 - **Labels**: `self-hosted`, `Linux`, `X64`
 - **Setup**: Install Docker (`apt install -y docker.io`), enable service, add runner user to docker group
-  ![alt text](<github action in Ec2.PNG>)
+  ![alt text](<docs/github action in Ec2.PNG>)
 
 ## Github workflow
 
-## ![alt text](CI-CD.PNG)
+![ML_project/docs/CI-CD.PNG](docs/CI-CD.PNG)
 
 ## ☁️ Deployment on AWS Elastic Beanstalk
 
@@ -354,15 +354,15 @@ option_settings:
 
 ### 🏠 Homepage
 
-![Home](c:\Users\dell\Pictures\studentperformance\start prediction.PNG)
+![ML_project/docs/start prediction.PNG](<docs/start prediction.PNG>)
 
 ### 📝 Form
 
-![Form](c:\Users\dell\Pictures\studentperformance\student Performance predictor page.PNG)
+![ML_project/docs/student Performance predictor page.PNG](<docs/student Performance predictor page.PNG>)
 
 ### 🎯 Prediction Result
 
-![Result](c:\Users\dell\Pictures\studentperformance\prediction score.PNG)
+![ML_project/docs/start prediction.PNG](<docs/start prediction.PNG>)
 
 ---
 
@@ -414,7 +414,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
   
-  **Made with ❤️ by [Your Name]**
+  **Made by Rroopesh Hari**
   
   ⭐ Star this repo if you find it helpful!
   
