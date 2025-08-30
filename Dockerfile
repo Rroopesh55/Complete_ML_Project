@@ -22,6 +22,7 @@ COPY . .
 RUN useradd -m appuser && chown -R appuser:appuser /app
 USER appuser
 
-EXPOSE 5000
+ENV PORT=8080
+EXPOSE 8080
 # module:object -> app.py defines `application`
-CMD ["gunicorn","-w","2","-k","gthread","--threads","4","-b","0.0.0.0:5000","app:application"]
+CMD ["gunicorn","-w","2","-k","gthread","--threads","4","-b","0.0.0.0:8080","app:application"]
