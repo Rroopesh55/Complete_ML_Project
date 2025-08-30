@@ -362,7 +362,7 @@ option_settings:
 
 ### 🎯 Prediction Result
 
-![ML_project/docs/start prediction.PNG](<docs/start prediction.PNG>)
+![alt text](<docs/prediction score.PNG>)
 
 ---
 
